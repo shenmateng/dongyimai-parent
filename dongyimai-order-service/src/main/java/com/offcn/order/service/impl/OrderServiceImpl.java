@@ -78,7 +78,7 @@ public class OrderServiceImpl implements OrderService {
         //判断是否存在购物车信息
         if (cartList != null && cartList.size() > 0) {
             for (Cart cart : cartList) {
-                long orderId = idWorker.nextId();
+                long orderId = idWorker.nextId(); //生成唯一id，比如第一次调用生成100，在同一个方法里第二次调用就会生成101
                 System.out.println("sellerId:" + cart.getSellerId());
                 TbOrder tborder = new TbOrder();// 新创建订单对象
                 tborder.setOrderId(orderId);// 订单ID

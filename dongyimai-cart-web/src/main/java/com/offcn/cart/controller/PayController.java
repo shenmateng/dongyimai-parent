@@ -53,7 +53,7 @@ public class PayController {
             //调用查询接口
             Map<String, String> map = null;
             try {
-                map = aliPayService.queryPayStatus(out_trade_no);
+                map = aliPayService.queryPayStatus(out_trade_no);  //返回支付状态，trade_no交易号
             } catch (Exception e1) {
                 /*e1.printStackTrace();*/
                 System.out.println("调用查询服务出错");
